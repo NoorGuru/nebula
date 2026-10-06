@@ -43,6 +43,7 @@ const isFailure = status === 'closed' || status === 'failed' || tags.includes('f
 const isUnicorn = tags.includes('unicorn');
 const isIdea = status === 'idea';
 const isFrontier = tags.includes('frontier');
+const isGarage = tags.includes('garage');
 const statusClass = isFailure
   ? 'card--failure'
   : isUnicorn
@@ -62,6 +63,7 @@ const copyText = `${title}\n\nSummary: ${summary}\n\nعربي: ${summaryAr || ''
   data-sector={sector ? sector.toLowerCase() : ''}
   data-status={isFailure ? 'failure' : isUnicorn ? 'unicorn' : isIdea ? 'idea' : 'operating'}
   data-frontier={isFrontier ? 'true' : 'false'}
+  data-garage={isGarage ? 'true' : 'false'}
 >
   <!-- Card Header Row -->
   <div class="card-header-row">
@@ -71,6 +73,9 @@ const copyText = `${title}\n\nSummary: ${summary}\n\nعربي: ${summaryAr || ''
       </span>
       {isFrontier && (
         <span class="card-badge-status card-badge-status--frontier">✦ Frontier</span>
+      )}
+      {isGarage && (
+        <span class="card-badge-status card-badge-status--garage">Garage</span>
       )}
     </span>
 

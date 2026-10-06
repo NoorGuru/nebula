@@ -54,6 +54,7 @@ export const tagArMap: Record<string, string> = {
   'food-security': 'أمن غذائي',
   idea: 'مرحلة الفكرة',
   frontier: 'أفكار رائدة',
+  garage: 'أفكار الكراج',
   japan: 'اليابان',
   uae: 'الإمارات',
   jordan: 'الأردن',

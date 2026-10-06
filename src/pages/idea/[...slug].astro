@@ -57,6 +57,7 @@ const isFailure = idea.data.status === 'closed' || idea.data.status === 'failed'
 const isUnicorn = idea.data.tags.includes('unicorn');
 const isIdea = idea.data.status === 'idea';
 const isFrontier = idea.data.tags.includes('frontier');
+const isGarage = idea.data.tags.includes('garage');
 
 const clean = (v: string) => (v || '').trim();
 const isMissing = (v: string) => {
@@ -77,6 +78,10 @@ const hasLicense = !isMissing(idea.data.license);
 const hasVision = !isMissing(idea.data.vision2030Fit);
 const hasMetrics = !isMissing(idea.data.usersMetrics);
 const hasInvestors = !isMissing(idea.data.investors);
+const hasBuildCost = !isMissing(idea.data.buildCost);
+const hasStack = !isMissing(idea.data.techStack);
+const hasFirstCustomer = !isMissing(idea.data.firstCustomer);
+const hasWhyNow = !isMissing(idea.data.whyNow);
 const statusLabel = idea.data.status === 'closed' ? 'Closed' : idea.data.status === 'failed' ? 'Failed' : idea.data.status === 'idea' ? 'Idea' : 'Operating';
 
 const words = (idea.body || '').split(/\s+/).filter(Boolean).length;
@@ -158,6 +163,9 @@ const pillars = [
       )}
       {isFrontier && (
         <span class="card-badge-status card-badge-status--frontier">✦ Frontier track</span>
+      )}
+      {isGarage && (
+        <span class="card-badge-status card-badge-status--garage">Garage build</span>
       )}
       {hasCompany && <span class="iv2-hero-company">{idea.data.company}</span>}
     </div>
@@ -244,6 +252,10 @@ const pillars = [
           {hasFounded && (<><dt>Founded</dt><dd>{idea.data.founded}</dd></>)}
           {hasStage && (<><dt>Stage</dt><dd style="text-transform: capitalize;">{idea.data.stage}</dd></>)}
           <dt>Status</dt><dd style="text-transform: capitalize;">{statusLabel}</dd>
+          {hasWhyNow && (<><dt>Why now</dt><dd>{idea.data.whyNow}</dd></>)}
+          {hasBuildCost && (<><dt>Build cost</dt><dd>{idea.data.buildCost}</dd></>)}
+          {hasStack && (<><dt>Stack</dt><dd>{idea.data.techStack}</dd></>)}
+          {hasFirstCustomer && (<><dt>First customer</dt><dd>{idea.data.firstCustomer}</dd></>)}
           {hasFounders && (<><dt>Founders</dt><dd>{idea.data.founders}</dd></>)}
           {hasHq && (<><dt>HQ</dt><dd>{idea.data.hqCity}</dd></>)}
           {hasBiz && (<><dt>Business model</dt><dd>{idea.data.businessModel}</dd></>)}

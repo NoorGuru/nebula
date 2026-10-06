@@ -33,6 +33,10 @@ const ideas = defineCollection({
     license: z.string().default(''),
     vision2030Fit: z.string().default(''),
     investors: z.string().default(''),
+    buildCost: z.string().default(''),
+    techStack: z.string().default(''),
+    firstCustomer: z.string().default(''),
+    whyNow: z.string().default(''),
     sources: z
       .array(z.object({ title: z.string(), url: z.string().url() }))
       .default([]),

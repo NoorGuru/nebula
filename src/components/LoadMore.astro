@@ -74,6 +74,7 @@ const firstPct = total > 0 ? Math.round((firstShown / total) * 100) : 0;
       if (filter === 'failure') return status === 'failure';
       if (filter === 'idea') return status === 'idea';
       if (filter === 'frontier') return card.getAttribute('data-frontier') === 'true';
+      if (filter === 'garage') return card.getAttribute('data-garage') === 'true';
       return sector.indexOf(filter) !== -1;
     }
 

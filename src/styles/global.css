@@ -2495,6 +2495,11 @@ body.is-pal-open {
   color: var(--color-teal-900);
 }
 
+.card-badge-status--garage {
+  background-color: var(--color-amber-100);
+  color: var(--color-amber-900);
+}
+
 .card-header-badges {
   display: inline-flex;
   align-items: center;
