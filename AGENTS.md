@@ -32,3 +32,4 @@ Write the locked brief to `research/<country>-brief.md` (copy from `research/cou
 - Lede rule (never break): `title` + `summary` state THE IDEA in English (what the company does/is), never the fundraise or latest news — funding lives in `## Funding` / `## Latest` only. `summaryAr` is the same idea in MSA Arabic; translate it yourself when sources are EN-only (and vice versa).
 - Body sections: `## The problem / ## How it works / ## Pain points / ## Business model / ## Challenges / ## Funding / ## Latest — <Mon YYYY>` (dated items only, no invented dates).
 - Run `npm run build` and fix schema errors. Never commit/push unless explicitly asked.
+
