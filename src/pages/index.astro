@@ -54,6 +54,7 @@ const flashcards = ideas.map((idea) => ({
   isFailure: idea.data.status === 'closed' || idea.data.status === 'failed' || idea.data.tags.includes('failure'),
   isUnicorn: idea.data.tags.includes('unicorn'),
   isIdea: idea.data.status === 'idea',
+  isFrontier: idea.data.tags.includes('frontier'),
 }));
 ---
 
@@ -112,6 +113,9 @@ const flashcards = ideas.map((idea) => ({
       </button>
       <button class="filter-btn" data-filter="idea" type="button">
         🌱 Ideas
+      </button>
+      <button class="filter-btn" data-filter="frontier" type="button">
+        ✦ Frontier
       </button>
       <a class="filter-btn" href="/tags" rel="prefetch" style="text-decoration: none;" title="Browse all countries and sectors">
         🧭 All categories →
@@ -267,6 +271,9 @@ const flashcards = ideas.map((idea) => ({
         if (item.isFailure) {
           fcBadge.textContent = '💥 FAILED · تعثرت';
           fcBadge.className = 'card-badge-status card-badge-status--failure';
+        } else if (item.isFrontier) {
+          fcBadge.textContent = '✦ FRONTIER · رائدة';
+          fcBadge.className = 'card-badge-status card-badge-status--frontier';
         } else if (item.isUnicorn) {
           fcBadge.textContent = '🦄 UNICORN · يونيكورن';
           fcBadge.className = 'card-badge-status card-badge-status--unicorn';

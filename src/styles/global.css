@@ -2488,6 +2488,20 @@ body.is-pal-open {
   color: var(--color-fuchsia-900);
 }
 
+/* Frontier track: teal encodes the cross-country push-forward track.
+   Status keeps its own top edge; frontier travels as a badge only. */
+.card-badge-status--frontier {
+  background-color: var(--color-teal-100);
+  color: var(--color-teal-900);
+}
+
+.card-header-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
 .card-kpi-pill {
   font-family: var(--font-mono);
   font-size: 0.75rem;

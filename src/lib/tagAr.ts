@@ -53,6 +53,7 @@ export const tagArMap: Record<string, string> = {
   climatetech: 'تكنولوجيا المناخ',
   'food-security': 'أمن غذائي',
   idea: 'مرحلة الفكرة',
+  frontier: 'أفكار رائدة',
   japan: 'اليابان',
   uae: 'الإمارات',
   jordan: 'الأردن',
@@ -73,6 +74,15 @@ export const tagArMap: Record<string, string> = {
   canada: 'كندا',
   agrifood: 'أغذية وزراعة',
   manufacturing: 'تصنيع',
+  uk: 'المملكة المتحدة',
+  'united kingdom': 'المملكة المتحدة',
+  usa: 'الولايات المتحدة',
+  'united states': 'الولايات المتحدة',
+  switzerland: 'سويسرا',
+  germany: 'ألمانيا',
+  france: 'فرنسا',
+  robotics: 'روبوتات',
+  space: 'فضاء',
 };
 
 // Tags that denote a country, not a sector/theme. The /tags index renders
@@ -100,6 +110,13 @@ export const countryTags = new Set([
   'iran',
   'lebanon',
   'canada',
+  'uk',
+  'united kingdom',
+  'usa',
+  'united states',
+  'switzerland',
+  'germany',
+  'france',
 ]);
 
 export const countryFlagMap: Record<string, string> = {
@@ -124,6 +141,13 @@ export const countryFlagMap: Record<string, string> = {
   iran: '🇮🇷',
   lebanon: '🇱🇧',
   canada: '🇨🇦',
+  uk: '🇬🇧',
+  'united kingdom': '🇬🇧',
+  usa: '🇺🇸',
+  'united states': '🇺🇸',
+  switzerland: '🇨🇭',
+  germany: '🇩🇪',
+  france: '🇫🇷',
 };
 
 // Display English name per country tag (tags use short codes like ksa/uae).
@@ -149,6 +173,13 @@ export const countryEnMap: Record<string, string> = {
   iran: 'Iran',
   lebanon: 'Lebanon',
   canada: 'Canada',
+  uk: 'United Kingdom',
+  'united kingdom': 'United Kingdom',
+  usa: 'United States',
+  'united states': 'United States',
+  switzerland: 'Switzerland',
+  germany: 'Germany',
+  france: 'France',
 };
 
 // Country cards on /tags share ONE uniform accent (set in

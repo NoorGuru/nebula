@@ -56,6 +56,7 @@ const countryTag = (idea.data.country || '').toLowerCase();
 const isFailure = idea.data.status === 'closed' || idea.data.status === 'failed' || idea.data.tags.includes('failure');
 const isUnicorn = idea.data.tags.includes('unicorn');
 const isIdea = idea.data.status === 'idea';
+const isFrontier = idea.data.tags.includes('frontier');
 
 const clean = (v: string) => (v || '').trim();
 const isMissing = (v: string) => {
@@ -154,6 +155,9 @@ const pillars = [
         <span class="card-badge-status card-badge-status--idea">Idea</span>
       ) : (
         <span class="card-badge-status card-badge-status--operating">{hasStage ? idea.data.stage : 'Operating'}</span>
+      )}
+      {isFrontier && (
+        <span class="card-badge-status card-badge-status--frontier">✦ Frontier track</span>
       )}
       {hasCompany && <span class="iv2-hero-company">{idea.data.company}</span>}
     </div>
